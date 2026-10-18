@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen CCSE Nacionalidad Española | Machuca y Abogados</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Playfair Display (Elegante/Jurídico) + Inter (Lectura) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#093D51',   // Primario
+                            beige: '#BE986E',  // Secundario
+                            gold: '#B88A16',   // Énfasis
+                            dark: '#000000',   // Texto
+                            light: '#FFFFFF'   // Blanco
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-overlay {
+            background: linear-gradient(135deg, rgba(9, 61, 81, 0.95) 0%, rgba(9, 61, 81, 0.85) 100%);
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px -10px rgba(9, 61, 81, 0.15);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 antialiased selection:bg-brand-gold selection:text-white">
+
+    <!-- Header / Navegación -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo Oficial Integrado -->
+                <a href="#" class="flex items-center">
+                    <img src="logo.jpg.jpeg" alt="Machuca Abogados Logo" class="h-12 sm:h-14 w-auto object-contain">
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-700">
+                    <a href="#que-es" class="hover:text-brand-gold transition-colors py-2">¿Qué es el CCSE?</a>
+                    <a href="#errores" class="hover:text-brand-gold transition-colors py-2">6 Errores Comunes</a>
+                    <a href="#test" class="hover:text-brand-gold transition-colors py-2">Test Interactivo</a>
+                    <a href="#metodo" class="hover:text-brand-gold transition-colors py-2">Cómo Prepararse</a>
+                </nav>
+
+                <!-- CTA Button Desktop -->
+                <div class="hidden md:flex items-center">
+                    <a href="#contacto" class="bg-brand-navy hover:bg-[#072d3d] text-white px-5 py-2.5 rounded-lg font-medium text-sm transition-all duration-200 shadow-sm hover:shadow border border-brand-navy">
+                        Solicitar Asesoría
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-navy p-2 rounded-md hover:bg-gray-100 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#que-es" class="block py-2 text-gray-700 hover:text-brand-gold font-medium">¿Qué es el CCSE?</a>
+            <a href="#errores" class="block py-2 text-gray-700 hover:text-brand-gold font-medium">6 Errores Comunes</a>
+            <a href="#test" class="block py-2 text-gray-700 hover:text-brand-gold font-medium">Test Interactivo</a>
+            <a href="#metodo" class="block py-2 text-gray-700 hover:text-brand-gold font-medium">Cómo Prepararse</a>
+            <a href="#contacto" class="block w-full text-center bg-brand-navy text-white py-3 rounded-lg font-medium mt-4">Solicitar Asesoría</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-brand-navy text-white py-16 md:py-24 overflow-hidden">
+        <!-- Background Image Overlay -->
+        <div class="absolute inset-0 z-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1543783207-ec64e4d95325?auto=format&fit=crop&w=1920&q=80" alt="Madrid España" class="w-full h-full object-cover">
+        </div>
+        
+        <!-- Background Pattern / Decorative Elements -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#BE986E_1px,transparent_1px)] [background-size:16px_16px] z-0"></div>
+        <div class="absolute -right-20 -top-20 w-96 h-96 bg-brand-gold/20 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7">
+                    <div class="inline-flex items-center space-x-2 bg-brand-gold/20 border border-brand-gold/40 text-brand-gold px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider mb-6">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Guía Oficial & Jurídica CCSE 2026</span>
+                    </div>
+                    
+                    <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight mb-6">
+                        6 errores que debes evitar al realizar el examen CCSE para la nacionalidad española
+                    </h1>
+                    
+                    <p class="text-lg md:text-xl text-gray-200 leading-relaxed mb-8">
+                        Prepárate para el examen CCSE y evita fallos críticos que pueden perjudicar tu preparación para obtener la nacionalidad española por residencia.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contacto" class="inline-flex justify-center items-center bg-brand-gold hover:bg-[#a07712] text-white px-7 py-3.5 rounded-lg font-semibold text-base transition-all shadow-lg hover:shadow-xl">
+                            <i class="fa-solid fa-scale-balanced mr-2"></i> Solicitar Asesoría Jurídica
+                        </a>
+                        <a href="#test" class="inline-flex justify-center items-center bg-white/10 hover:bg-white/20 text-white border border-white/30 px-7 py-3.5 rounded-lg font-semibold text-base transition-all backdrop-blur-sm">
+                            <i class="fa-solid fa-pen-to-square mr-2"></i> Hacer Test de Prueba
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 relative hidden lg:block">
+                    <div class="relative rounded-2xl overflow-hidden border-2 border-brand-gold/30 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80" alt="Despacho de abogados de extranjería" class="w-full h-[420px] object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-transparent to-transparent flex items-end p-6">
+                            <div class="flex items-center space-x-3 text-white">
+                                <i class="fa-solid fa-award text-brand-gold text-2xl"></i>
+                                <div>
+                                    <p class="font-serif font-bold text-sm">Machuca & Abogados</p>
+                                    <p class="text-xs text-gray-300">Especialistas en Extranjería y Nacionalidad</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 1: ¿Qué es el examen CCSE? -->
+    <section id="que-es" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+                <div class="lg:col-span-7">
+                    <span class="text-brand-gold font-semibold uppercase tracking-wider text-xs">Información Esencial</span>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-navy mt-2">¿Qué es el Examen CCSE?</h2>
+                    <p class="text-gray-600 mt-4 text-lg leading-relaxed">
+                        La prueba de <strong>Conocimientos Constitucionales y Socioculturales de España (CCSE)</strong> es elaborada por el Instituto Cervantes y evalúa la Constitución, instituciones, derechos, deberes, historia y realidad social de España.
+                    </p>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="rounded-xl overflow-hidden shadow-md border border-gray-100">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" alt="Estudiando para el examen CCSE" class="w-full h-56 object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid de Características -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 card-hover text-center relative">
+                    <div class="w-12 h-12 bg-brand-navy/10 text-brand-navy rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+                    <h3 class="font-bold text-2xl text-brand-navy mb-1">25 Preguntas</h3>
+                    <p class="text-sm text-gray-600">Distribuidas en cinco tareas con formato de opción múltiple y verdadero/falso.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 card-hover text-center">
+                    <div class="w-12 h-12 bg-brand-navy/10 text-brand-navy rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3 class="font-bold text-2xl text-brand-navy mb-1">45 Minutos</h3>
+                    <p class="text-sm text-gray-600">Tiempo suficiente para responder con calma si has estudiado con antelación.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 card-hover text-center">
+                    <div class="w-12 h-12 bg-brand-gold/10 text-brand-gold rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <h3 class="font-bold text-2xl text-brand-navy mb-1">15 Aciertos</h3>
+                    <p class="text-sm text-gray-600">Mínimo necesario para obtener la calificación de <strong>APTO</strong>. Las incorrectas no restan.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 card-hover text-center">
+                    <div class="w-12 h-12 bg-brand-navy/10 text-brand-navy rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                        <i class="fa-solid fa-book-bookmark"></i>
+                    </div>
+                    <h3 class="font-bold text-2xl text-brand-navy mb-1">Manual 2026</h3>
+                    <p class="text-sm text-gray-600">Es indispensable preparar la prueba con el temario oficial del año de convocatoria.</p>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-brand-navy/5 border-l-4 border-brand-gold p-6 rounded-r-xl max-w-4xl mx-auto flex items-start space-x-4">
+                <i class="fa-solid fa-lightbulb text-brand-gold text-2xl mt-1 flex-shrink-0"></i>
+                <p class="text-sm md:text-base text-gray-700">
+                    <strong>Recuerda:</strong> Conocer los requisitos de la nacionalidad española por residencia te permite preparar tu solicitud con mayor seguridad y evitar errores por falta de información.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 2: Los 6 Errores que debes evitar -->
+    <section id="errores" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-gold font-semibold uppercase tracking-wider text-xs">Preparación Eficiente</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-navy mt-2">6 Errores a Evitar en el Examen CCSE</h2>
+                <p class="text-gray-600 mt-4">Muchas personas se centran únicamente en memorizar y pasan por alto aspectos determinantes para su resultado.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Error 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 card-hover relative overflow-hidden">
+                    <span class="absolute -right-2 -bottom-4 text-7xl font-bold text-gray-100 pointer-events-none font-serif">1</span>
+                    <div class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold mb-4">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-brand-navy mb-3">1. Manual desactualizado</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Estudiar con materiales de años anteriores puede hacer que memorices respuestas erróneas. Comprueba siempre usar el <strong>Manual Oficial CCSE 2026</strong>.
+                    </p>
+                </div>
+
+                <!-- Error 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 card-hover relative overflow-hidden">
+                    <span class="absolute -right-2 -bottom-4 text-7xl font-bold text-gray-100 pointer-events-none font-serif">2</span>
+                    <div class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold mb-4">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-brand-navy mb-3">2. Memorizar sin comprender</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        El CCSE evalúa conceptos constitucionales y socioculturales. Comprender el contexto te dará seguridad ante preguntas formuladas de forma distinta.
+                    </p>
+                </div>
+
+                <!-- Error 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 card-hover relative overflow-hidden">
+                    <span class="absolute -right-2 -bottom-4 text-7xl font-bold text-gray-100 pointer-events-none font-serif">3</span>
+                    <div class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold mb-4">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-brand-navy mb-3">3. No realizar simulacros</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Estudiar la teoría es solo una parte. No practicar con modelos de examen reales te impedirá detectar qué temas necesitas reforzar.
+                    </p>
+                </div>
+
+                <!-- Error 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 card-hover relative overflow-hidden">
+                    <span class="absolute -right-2 -bottom-4 text-7xl font-bold text-gray-100 pointer-events-none font-serif">4</span>
+                    <div class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold mb-4">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-brand-navy mb-3">4. Ignorar la estructura</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Desconocer que son 25 preguntas, 45 minutos y que requieres 15 aciertos para el APTO genera ansiedad innecesaria el día de la prueba.
+                    </p>
+                </div>
+
+                <!-- Error 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 card-hover relative overflow-hidden">
+                    <span class="absolute -right-2 -bottom-4 text-7xl font-bold text-gray-100 pointer-events-none font-serif">5</span>
+                    <div class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold mb-4">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-brand-navy mb-3">5. Lectura apresurada</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Los nervios inducen a no leer detenidamente cada enunciado. Una palabra mal interpretada puede cambiar totalmente el sentido de la pregunta.
+                    </p>
+                </div>
+
+                <!-- Error 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 card-hover relative overflow-hidden">
+                    <span class="absolute -right-2 -bottom-4 text-7xl font-bold text-gray-100 pointer-events-none font-serif">6</span>
+                    <div class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold mb-4">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-brand-navy mb-3">6. Estudiar a última hora</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Dejar el aprendizaje para los días previos eleva el estrés. Diseña un plan progresivo y practica periódicamente.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 3: Test Interactivo en Vivo -->
+    <section id="test" class="py-16 md:py-24 bg-brand-navy text-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-brand-gold font-semibold uppercase tracking-wider text-xs">Simulacro Rápido</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mt-2">¿Sabes responder estas preguntas del CCSE?</h2>
+                <p class="text-gray-300 mt-2">Pon a prueba tus conocimientos sobre la Constitución y las instituciones de España.</p>
+            </div>
+
+            <!-- Quiz Card Widget -->
+            <div class="bg-white text-gray-800 rounded-2xl p-6 sm:p-10 shadow-2xl border border-gray-100">
+                <!-- Progress Header -->
+                <div class="flex justify-between items-center mb-8 border-b border-gray-100 pb-4">
+                    <span class="text-sm font-semibold text-brand-navy uppercase tracking-wider" id="quiz-progress-text">Pregunta 1 de 3</span>
+                    <span class="text-sm font-bold text-brand-gold bg-brand-gold/10 px-3 py-1 rounded-full" id="quiz-score">Puntuación: 0 / 3</span>
+                </div>
+
+                <!-- Question Container -->
+                <div id="quiz-body">
+                    <!-- Q1 -->
+                    <div class="quiz-step block" data-step="1">
+                        <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-navy mb-6">
+                            1. ¿Cuál es la norma suprema del ordenamiento jurídico español?
+                        </h3>
+                        <div class="space-y-3">
+                            <button onclick="checkAnswer(1, 'A', false, this)" class="w-full text-left p-4 rounded-xl border border-gray-200 hover:border-brand-navy hover:bg-gray-50 transition-all flex justify-between items-center group">
+                                <span class="font-medium text-gray-700">A) El Código Civil</span>
+                                <i class="fa-regular fa-circle text-gray-300 group-hover:text-brand-navy"></i>
+                            </button>
+                            <button onclick="checkAnswer(1, 'B', true, this)" class="w-full text-left p-4 rounded-xl border border-gray-200 hover:border-brand-navy hover:bg-gray-50 transition-all flex justify-between items-center group">
+                                <span class="font-medium text-gray-700">B) La Constitución española</span>
+                                <i class="fa-regular fa-circle text-gray-300 group-hover:text-brand-navy"></i>
+                            </button>
+                            <button onclick="checkAnswer(1, 'C', false, this)" class="w-full text-left p-4 rounded-xl border border-gray-200 hover:border-brand-navy hover:bg-gray-50 transition-all flex justify-between items-center group">
+                                <span class="font-medium text-gray-700">C) El Estatuto de los Trabajadores</span>
+                                <i class="fa-regular fa-circle text-gray-300 group-hover:text-brand-navy"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="quiz-step hidden" data-step="2">
+                        <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-navy mb-6">
+                            2. ¿Cuántas preguntas debes responder correctamente para superar el examen CCSE?
+                        </h3>
+                        <div class="space-y-3">
+                            <button onclick="checkAnswer(2, 'A', false, this)" class="w-full text-left p-4 rounded-xl border border-gray-200 hover:border-brand-navy hover:bg-gray-50 transition-all flex justify-between items-center group">
+                                <span class="font-medium text-gray-700">A) 10 preguntas</span>
+                                <i class="fa-regular fa-circle text-gray-300 group-hover:text-brand-navy"></i>
+                            </button>
+                            <button onclick="checkAnswer(2, 'B', true, this)" class="w-full text-left p-4 rounded-xl border border-gray-200 hover:border-brand-navy hover:bg-gray-50 transition-all flex justify-between items-center group">
+                                <span class="font-medium text-gray-700">B) 15 preguntas</span>
+                                <i class="fa-regular fa-circle text-gray-300 group-hover:text-brand-navy"></i>
+                            </button>
+                            <button onclick="checkAnswer(2, 'C', false, this)" class="w-full text-left p-4 rounded-xl border border-gray-200 hover:border-brand-navy hover:bg-gray-50 transition-all flex justify-between items-center group">
+                                <span class="font-medium text-gray-700">C) 20 preguntas</span>
+                                <i class="fa-regular fa-circle text-gray-300 group-hover:text-brand-navy"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="quiz-step hidden" data-step="3">
+                        <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-navy mb-6">
+                            3. ¿Qué institución elabora el examen CCSE?
+                        </h3>
+                        <div class="space-y-3">
+                            <button onclick="checkAnswer(3, 'A', true, this)" class="w-full text-left p-4 rounded-xl border border-gray-200 hover:border-brand-navy hover:bg-gray-50 transition-all flex justify-between items-center group">
+                                <span class="font-medium text-gray-700">A) El Instituto Cervantes</span>
+                                <i class="fa-regular fa-circle text-gray-300 group-hover:text-brand-navy"></i>
+                            </button>
+                            <button onclick="checkAnswer(3, 'B', false, this)" class="w-full text-left p-4 rounded-xl border border-gray-200 hover:border-brand-navy hover:bg-gray-50 transition-all flex justify-between items-center group">
+                                <span class="font-medium text-gray-700">B) El Congreso de los Diputados</span>
+                                <i class="fa-regular fa-circle text-gray-300 group-hover:text-brand-navy"></i>
+                            </button>
+                            <button onclick="checkAnswer(3, 'C', false, this)" class="w-full text-left p-4 rounded-xl border border-gray-200 hover:border-brand-navy hover:bg-gray-50 transition-all flex justify-between items-center group">
+                                <span class="font-medium text-gray-700">C) El Ministerio del Interior</span>
+                                <i class="fa-regular fa-circle text-gray-300 group-hover:text-brand-navy"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Feedback Box -->
+                    <div id="quiz-feedback" class="mt-6 p-4 rounded-xl hidden text-sm font-medium"></div>
+
+                    <!-- Navigation inside quiz -->
+                    <div class="mt-8 flex justify-end">
+                        <button id="next-btn" onclick="nextQuestion()" class="hidden bg-brand-navy text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-brand-gold transition-all">
+                            Siguiente Pregunta <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Results Box -->
+                <div id="quiz-result" class="hidden text-center py-6">
+                    <div class="w-16 h-16 bg-brand-gold/20 text-brand-gold rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-brand-navy mb-2">¡Has completado el test!</h3>
+                    <p class="text-gray-600 mb-6" id="result-text"></p>
+                    <button onclick="restartQuiz()" class="bg-gray-100 hover:bg-gray-200 text-brand-navy font-semibold px-6 py-2.5 rounded-lg transition-colors text-sm">
+                        Volver a intentar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 4: Método de Preparación y Aclaración Jurídica -->
+    <section id="metodo" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div>
+                    <span class="text-brand-gold font-semibold uppercase tracking-wider text-xs">Paso a Paso</span>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-navy mt-2 mb-6">
+                        ¿Cómo organizar tu preparación para el CCSE?
+                    </h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Aprobar no se trata únicamente de memorizar; requiere un método de estudio organizado con herramientas oficiales.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 rounded-full bg-brand-navy text-white font-bold flex items-center justify-center flex-shrink-0 text-sm">1</div>
+                            <div>
+                                <h4 class="font-bold text-brand-navy text-lg">Conoce la estructura</h4>
+                                <p class="text-gray-600 text-sm mt-1">Familiarízate con las 25 preguntas, las 5 tareas y los 45 minutos disponibles.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 rounded-full bg-brand-navy text-white font-bold flex items-center justify-center flex-shrink-0 text-sm">2</div>
+                            <div>
+                                <h4 class="font-bold text-brand-navy text-lg">Consulta el Manual Oficial 2026</h4>
+                                <p class="text-gray-600 text-sm mt-1">Estudia los contenidos y preguntas del temario publicado por el Instituto Cervantes.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 rounded-full bg-brand-navy text-white font-bold flex items-center justify-center flex-shrink-0 text-sm">3</div>
+                            <div>
+                                <h4 class="font-bold text-brand-navy text-lg">Usa la App Oficial e iguala simulacros</h4>
+                                <p class="text-gray-600 text-sm mt-1">Practica con regularidad y revisa detalladamente las preguntas que hayas fallado.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 rounded-full bg-brand-navy text-white font-bold flex items-center justify-center flex-shrink-0 text-sm">4</div>
+                            <div>
+                                <h4 class="font-bold text-brand-navy text-lg">Revisa tu expediente global</h4>
+                                <p class="text-gray-600 text-sm mt-1">Recuerda que el CCSE es solo uno de los trámites legales del expediente de nacionalidad por residencia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Box Jurídico Destacado con Imagen -->
+                <div class="bg-gray-50 border border-brand-beige/40 rounded-2xl overflow-hidden shadow-sm">
+                    <div class="h-48 relative">
+                        <img src="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?auto=format&fit=crop&w=800&q=80" alt="Constitución y leyes de España" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-brand-navy/40"></div>
+                        <div class="absolute bottom-4 left-6 text-white font-serif font-bold text-xl flex items-center gap-2">
+                            <i class="fa-solid fa-scale-balanced text-brand-gold"></i>
+                            <span>Advertencia Jurídica Importante</span>
+                        </div>
+                    </div>
+                    <div class="p-8 sm:p-10">
+                        <p class="text-gray-700 leading-relaxed text-sm sm:text-base mb-6">
+                            Superar el examen CCSE es un requisito indispensable para la gran mayoría de solicitantes, <strong>pero no garantiza por sí solo la concesión de la nacionalidad española</strong>.
+                        </p>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Debes cumplir de forma rigurosa los demás requisitos legales: residencia legal continuada, carencia de antecedentes penales, buena conducta cívica y aportación correcta de la documentación original debidamente legalizada o apostillada.
+                        </p>
+                        <div class="border-t border-gray-200 pt-6">
+                            <span class="block text-xs uppercase tracking-wider font-semibold text-brand-navy mb-1">Despacho Jurídico Especializado</span>
+                            <p class="text-sm font-serif italic text-brand-gold">Machuca y Abogados – Asesoría personalizada en Extranjería y Nacionalidad.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 5: Formulario de Contacto / Conversión -->
+    <section id="contacto" class="py-16 md:py-24 bg-brand-navy text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1920&q=80" alt="Palacio Real España" class="w-full h-full object-cover">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5">
+                    <span class="text-brand-gold font-semibold uppercase tracking-wider text-xs">Atención Personalizada</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2 mb-6">
+                        ¿Tienes dudas sobre tu proceso de Nacionalidad Española?
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed mb-8">
+                        Analizamos tu expediente de residencia, revisamos si cumples las dispensas del CCSE/DELE y tramitamos tu solicitud con la máxima rigor normativo.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3 text-gray-200">
+                            <i class="fa-solid fa-check text-brand-gold"></i>
+                            <span>Revisión de requisitos de residencia</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-gray-200">
+                            <i class="fa-solid fa-check text-brand-gold"></i>
+                            <span>Solicitud de dispensas o adaptaciones de examen</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-gray-200">
+                            <i class="fa-solid fa-check text-brand-gold"></i>
+                            <span>Presentación telemática del expediente</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="bg-white text-gray-800 p-8 sm:p-10 rounded-2xl shadow-xl">
+                        <h3 class="font-serif text-2xl font-bold text-brand-navy mb-2">Consulta con un Abogado</h3>
+                        <p class="text-sm text-gray-600 mb-6">Completa tus datos y nos pondremos en contacto a la brevedad.</p>
+
+                        <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-brand-navy uppercase tracking-wider mb-2">Nombre Completo *</label>
+                                    <input type="text" required placeholder="Ej. María García" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-brand-navy uppercase tracking-wider mb-2">Teléfono / WhatsApp *</label>
+                                    <input type="tel" required placeholder="+34 600 000 000" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold text-sm">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-brand-navy uppercase tracking-wider mb-2">Correo Electrónico *</label>
+                                <input type="email" required placeholder="correo@ejemplo.com" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold text-sm">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-brand-navy uppercase tracking-wider mb-2">Consulta o Estado de tu Trámite</label>
+                                <textarea rows="4" placeholder="Cuéntanos brevemente tu situación (tiempo de residencia, dudas CCSE, etc.)" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold text-sm"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-brand-gold hover:bg-[#a07712] text-white font-bold py-3.5 px-6 rounded-lg transition-colors shadow-md text-base">
+                                Enviar Consulta Jurídica
+                            </button>
+                        </form>
+
+                        <div id="form-success" class="hidden mt-4 p-4 bg-green-50 border border-green-200 text-green-800 rounded-lg text-sm text-center">
+                            <i class="fa-solid fa-circle-check text-green-600 text-lg mb-1 block"></i>
+                            ¡Gracias por escribirnos! Tu mensaje ha sido recibido. Un abogado del equipo se pondrá en contacto contigo pronto.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#052430] text-gray-400 py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Columna 1 con Logo Oficial -->
+                <div class="md:col-span-2">
+                    <div class="mb-4 inline-block bg-white p-2 rounded-lg shadow-sm">
+                        <img src="logo.jpg.jpeg" alt="Machuca Abogados Logo" class="h-10 w-auto object-contain">
+                    </div>
+                    <p class="text-sm text-gray-400 max-w-sm mb-4 leading-relaxed">
+                        Despacho legal especializado en Extranjería, Asesoría Jurídica e Integración para el procedimiento de Nacionalidad Española por Residencia.
+                    </p>
+                    <!-- Hashtags -->
+                    <div class="flex flex-wrap gap-2 text-xs text-brand-gold">
+                        <span>#ExamenCCSE</span>
+                        <span>#NacionalidadEspañola</span>
+                        <span>#CCSE2026</span>
+                        <span>#ExtranjeríaEspaña</span>
+                    </div>
+                </div>
+
+                <!-- Columna 2 -->
+                <div>
+                    <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Enlaces Útiles</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#que-es" class="hover:text-white transition-colors">¿Qué es el CCSE?</a></li>
+                        <li><a href="#errores" class="hover:text-white transition-colors">Errores Comunes</a></li>
+                        <li><a href="#test" class="hover:text-white transition-colors">Test Interactivo</a></li>
+                        <li><a href="https://ccse.cervantes.es/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors flex items-center">
+                            Portal Cervantes <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-1"></i>
+                        </a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3 -->
+                <div>
+                    <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Contacto Legal</h4>
+                    <p class="text-sm leading-relaxed">
+                        Atención presencial y telemática para toda España.<br>
+                        <i class="fa-solid fa-envelope mr-1 text-brand-gold"></i> contacto@machucaabogados.es
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2026 Machuca y Abogados. Todos los derechos reservados.</p>
+                <p class="mt-2 sm:mt-0">Contenido informativo adaptado al examen CCSE 2026.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript para interactividad -->
+    <script>
+        // Toggle Menú Móvil
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Lógica del Quiz / Test Interactivo
+        let currentStep = 1;
+        let score = 0;
+        const totalQuestions = 3;
+        let answeredQuestions = {};
+
+        function checkAnswer(step, option, isCorrect, btnElement) {
+            if (answeredQuestions[step]) return; // Evitar responder múltiples veces la misma pregunta
+            
+            answeredQuestions[step] = true;
+            const feedbackBox = document.getElementById('quiz-feedback');
+            const parent = btnElement.parentElement;
+            const buttons = parent.querySelectorAll('button');
+
+            // Deshabilitar botones de la pregunta actual
+            buttons.forEach(btn => btn.classList.add('cursor-not-allowed', 'opacity-70'));
+
+            if (isCorrect) {
+                btnElement.classList.remove('border-gray-200', 'hover:border-brand-navy');
+                btnElement.classList.add('bg-green-100', 'border-green-500', 'text-green-900');
+                btnElement.querySelector('i').className = "fa-solid fa-circle-check text-green-600";
+                
+                score++;
+                feedbackBox.className = "mt-6 p-4 rounded-xl bg-green-50 border border-green-200 text-green-800 text-sm font-medium";
+                feedbackBox.innerHTML = "<i class='fa-solid fa-circle-check mr-2'></i> <strong>¡Correcto!</strong> Excelente respuesta.";
+            } else {
+                btnElement.classList.remove('border-gray-200', 'hover:border-brand-navy');
+                btnElement.classList.add('bg-red-100', 'border-red-500', 'text-red-900');
+                btnElement.querySelector('i').className = "fa-solid fa-circle-xmark text-red-600";
+
+                feedbackBox.className = "mt-6 p-4 rounded-xl bg-red-50 border border-red-200 text-red-800 text-sm font-medium";
+                feedbackBox.innerHTML = "<i class='fa-solid fa-circle-xmark mr-2'></i> <strong>Incorrecto.</strong> Revisa el temario oficial para afianzar este punto.";
+            }
+
+            feedbackBox.classList.remove('hidden');
+            document.getElementById('quiz-score').innerText = `Puntuación: ${score} / ${totalQuestions}`;
+            document.getElementById('next-btn').classList.remove('hidden');
+        }
+
+        function nextQuestion() {
+            document.getElementById('quiz-feedback').classList.add('hidden');
+            document.getElementById('next-btn').classList.add('hidden');
+
+            const currentElement = document.querySelector(`.quiz-step[data-step="${currentStep}"]`);
+            currentElement.classList.add('hidden');
+
+            currentStep++;
+
+            if (currentStep <= totalQuestions) {
+                const nextElement = document.querySelector(`.quiz-step[data-step="${currentStep}"]`);
+                nextElement.classList.remove('hidden');
+                document.getElementById('quiz-progress-text').innerText = `Pregunta ${currentStep} de ${totalQuestions}`;
+            } else {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            document.getElementById('quiz-progress-text').innerText = 'Test Completado';
+            document.getElementById('quiz-body').classList.add('hidden');
+            const resultBox = document.getElementById('quiz-result');
+            resultBox.classList.remove('hidden');
+
+            const resultText = document.getElementById('result-text');
+            if (score === 3) {
+                resultText.innerHTML = `¡Obtuviste <strong>3 de 3 aciertos</strong>! Tienes una base sólida sobre las instituciones y leyes de España.`;
+            } else if (score >= 1) {
+                resultText.innerHTML = `Obtuviste <strong>${score} de 3 aciertos</strong>. Vas por buen camino, pero te recomendamos estudiar con el manual CCSE 2026.`;
+            } else {
+                resultText.innerHTML = `Obtuviste <strong>0 de 3 aciertos</strong>. No te preocupes, con el método adecuado y el manual oficial estarás preparado.`;
+            }
+        }
+
+        function restartQuiz() {
+            currentStep = 1;
+            score = 0;
+            answeredQuestions = {};
+            
+            document.getElementById('quiz-score').innerText = `Puntuación: 0 / ${totalQuestions}`;
+            document.getElementById('quiz-progress-text').innerText = `Pregunta 1 de 3`;
+            document.getElementById('quiz-result').classList.add('hidden');
+            document.getElementById('quiz-body').classList.remove('hidden');
+
+            // Reset UI of questions
+            document.querySelectorAll('.quiz-step').forEach((el, index) => {
+                if (index === 0) el.classList.remove('hidden');
+                else el.classList.add('hidden');
+
+                const buttons = el.querySelectorAll('button');
+                buttons.forEach(btn => {
+                    btn.className = "w-full text-left p-4 rounded-xl border border-gray-200 hover:border-brand-navy hover:bg-gray-50 transition-all flex justify-between items-center group opacity-100 cursor-pointer";
+                    btn.querySelector('i').className = "fa-regular fa-circle text-gray-300 group-hover:text-brand-navy";
+                });
+            });
+        }
+
+        // Form Submit handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            document.getElementById('contact-form').classList.add('hidden');
+            document.getElementById('form-success').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
